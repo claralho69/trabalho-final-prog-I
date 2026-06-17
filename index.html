@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo de Filmes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container py-5">
+<div class="card shadow-lg border-0">
+<div class="card-body p-4">
+<h1 class="text-center mb-4">Catálogo de Filmes</h1>
+
+<form id="formFilme">
+<input type="hidden" id="idFilme">
+
+<div class="row g-3">
+<div class="col-md-5">
+<input type="text" id="titulo" class="form-control" placeholder="Título do filme" required>
+</div>
+
+<div class="col-md-4">
+<select
+    id="genero"
+    class="form-select"
+    required>
+
+    <option value="">Selecione um gênero</option>
+
+    <option value="Ação">Ação</option>
+    <option value="Aventura">Aventura</option>
+    <option value="Comédia">Comédia</option>
+    <option value="Drama">Drama</option>
+    <option value="Fantasia">Fantasia</option>
+    <option value="Ficção Científica">Ficção Científica</option>
+    <option value="Romance">Romance</option>
+    <option value="Suspense">Suspense</option>
+    <option value="Terror">Terror</option>
+    <option value="Animação">Animação</option>
+    <option value="Documentário">Documentário</option>
+
+</select>
+</div>
+
+<div class="col-md-3">
+<select id="nota" class="form-select" required>
+<option value="">Nota</option>
+<option value="1">⭐</option>
+<option value="2">⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="5">⭐⭐⭐⭐⭐</option>
+</select>
+</div>
+</div>
+
+<button class="btn btn-primary w-100 mt-3">Salvar Filme</button>
+</form>
+</div>
+</div>
+
+<div class="card shadow-sm mt-4 border-0">
+<div class="card-body">
+<table class="table table-hover align-middle">
+<thead>
+<tr>
+<th>Título</th>
+<th>Gênero</th>
+<th>Nota</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody id="tabelaFilmes"></tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
